@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Messaging Website - Submit a Message</title>
+  <link rel="stylesheet" href="css/submissionFormStyles.css" />
+  <script src="./js/messageSubmissionPage.js" defer></script>
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navigation-list-container">
+    <ul class="navigation-list">
+      <li class="navigation-list-item"><a href="Index Page.html" class="nav-link-item">Home</a></li>
+      <li class="navigation-list-item"><a href="Message Submission Page.html" class="nav-link-item active">Submit a Message</a></li>
+      <li class="navigation-list-item"><a href="Message Display Page.html" class="nav-link-item">View Messages</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <header class="main-header">
+      <h1 class="main-title">Submit a Message</h1>
+    </header>
+
+    <section class="description">
+      <p>To submit a message, please fill out the form below with the required information: your name, email, and the message you wish to send.</p>
+    </section>
+
+    <form id="form" action="/submit" method="post" novalidate>
+      <div class="input-control">
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" required />
+        <div class="errorMsg" aria-live="polite"></div>
+      </div>
+
+      <div class="input-control">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+        <div class="errorMsg" aria-live="polite"></div>
+      </div>
+
+      <div class="input-control">
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+        <div class="errorMsg" aria-live="polite"></div>
+      </div>
+
+      <button type="submit" class="submit-btn">Submit</button>
+      <div class="successful" aria-live="polite">Message submitted, thanks!</div>
+    </form>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Messaging Website</p>
+  </footer>
+</body>
+</html>

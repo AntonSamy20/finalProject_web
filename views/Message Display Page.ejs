@@ -1,0 +1,50 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Messaging Website - View Messages</title>
+  <link rel="stylesheet" href="/css/messageDisplayStyles.css" />
+  <script src="/js/viewMessagesPage.js" defer></script>
+</head>
+<body>
+  <div class="navigation-list-container">
+    <ul class="navigation-list">
+      <li class="navigation-list-item"><a href="/home" class="nav-link-item">Home</a></li>
+      <li class="navigation-list-item"><a href="/submit" class="nav-link-item">Submit a Message</a></li>
+      <li class="navigation-list-item"><a href="/view" class="nav-link-item">View Messages</a></li>
+    </ul>
+  </div>
+
+  <main>
+    <header>
+      <h1 class="main-title">View Messages</h1>
+    </header>
+
+    <div class="table-container">
+      <table class="messages-table">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Email</th>
+            <th>Message</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% messages.forEach(msg => { %>
+            <tr>
+              <td><%= msg.title %></td>
+              <td><%= msg.email %></td>
+              <td><%= msg.message %></td>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Messaging Website</p>
+  </footer>
+</body>
+</html>

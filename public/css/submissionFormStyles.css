@@ -1,0 +1,208 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  color: #333333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navigation */
+.navigation-list-container {
+  background-color: #d4f1d6;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.navigation-list {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  font-size: 18px;
+}
+
+.navigation-list-item {
+  display: flex;
+  align-items: center;
+}
+
+.nav-link-item {
+  text-decoration: none;
+  color: #28C74B;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.nav-link-item:hover {
+  background-color: #d8f6e3;
+  color: #1a9438;
+}
+
+/* Main Content */
+main {
+  flex: 1;
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.main-title {
+  font-size: 36px;
+  color: #28C74B;
+  margin-bottom: 20px;
+}
+
+.description p {
+  font-size: 20px;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto;
+  color: #555;
+}
+
+/* Table Styling */
+.table-container {
+  overflow-x: auto;
+  margin-top: 40px;
+}
+
+.messages-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.messages-table th,
+.messages-table td {
+  padding: 16px 20px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.messages-table th {
+  background-color: #28C74B;
+  color: #fff;
+  font-weight: 600;
+}
+
+.messages-table tr:nth-child(even) td {
+  background-color: #f3fff5;
+}
+
+/* Footer */
+footer {
+  background-color: #d4f1d6;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  color: #444;
+  box-shadow: 0 -1px 8px rgba(0, 0, 0, 0.03);
+  margin-top: auto;
+}
+
+footer p {
+  margin: 0;
+  padding: 0 20px;
+}
+/* Form Styling */
+form {
+  background-color: #fff;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  text-align: left;
+}
+
+.input-control {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.input-control label {
+  font-size: 16px;
+  color: #333;
+  font-weight: 500;
+}
+
+.input-control input[type="text"],
+.input-control input[type="email"],
+.input-control textarea {
+  padding: 12px 14px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  resize: vertical;
+  transition: border-color 0.3s ease;
+}
+
+.input-control input:focus,
+.input-control textarea:focus {
+  border-color: #28C74B;
+  outline: none;
+}
+
+/* Submit Button */
+form input[type="submit"],
+.submit-btn {
+  background-color: #28C74B;
+  color: #fff;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover,
+.submit-btn:hover {
+  background-color: #1fa33f;
+}
+
+/* Error & Success Styles */
+.input-control.error input,
+.input-control.error textarea {
+  border-color: red;
+}
+
+.input-control.success input,
+.input-control.success textarea {
+  border-color: green;
+}
+
+.errorMsg {
+  font-size: 14px;
+  color: red;
+  margin-top: 4px;
+}
+
+.successful {
+  font-size: 16px;
+  color: green;
+  text-align: center;
+  margin-top: 10px;
+  display: none;
+}

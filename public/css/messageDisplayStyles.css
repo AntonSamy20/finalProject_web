@@ -1,0 +1,149 @@
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navigation Bar */
+.navigation-list-container {
+  background-color: #d4f1d6;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  margin-bottom: 40px;
+}
+
+.navigation-list {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  font-size: 18px;
+}
+
+.navigation-list-item {
+  display: flex;
+  align-items: center;
+}
+
+.nav-link-item {
+  text-decoration: none;
+  color: #28C74B;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.nav-link-item:hover {
+  background-color: #d8f6e3;
+  color: #1a9438;
+}
+
+/* Main Layout */
+main {
+  flex: 1;
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 0 20px 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Page Titles */
+.main-title {
+  font-size: 36px;
+  color: #28C74B;
+  text-align: center;
+}
+
+.description p {
+  font-size: 20px;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto;
+  color: #555;
+  text-align: center;
+}
+
+/* Table Styling */
+.table-container {
+  overflow-x: auto;
+  padding: 10px;
+}
+
+.messages-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 12px;
+  background-color: transparent;
+}
+
+.messages-table caption {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #28C74B;
+  text-align: left;
+}
+
+.messages-table th {
+  background-color: #28C74B;
+  color: #fff;
+  padding: 15px 24px;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.messages-table td {
+  background-color: #ffffff;
+  color: #444;
+  padding: 18px 24px;
+  font-size: 20px;
+}
+
+.messages-table tr {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  border-radius: 10px;
+}
+
+.messages-table tr:nth-child(even) td {
+  background-color: #f3fff5;
+}
+
+.messages-table tr:not(:last-child) td {
+  border-bottom: 1px solid #eee;
+}
+
+/* Footer */
+footer {
+  background-color: #d4f1d6;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  color: #444;
+  box-shadow: 0 -1px 8px rgba(0, 0, 0, 0.03);
+  margin-top: auto;
+  padding: 0 20px;
+  position: relative;
+}
